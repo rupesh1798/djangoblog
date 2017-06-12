@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+
+
+        <div>
+            <p>Date:2017-06-12 Time:11:04:19 </p>
+            <h2><a href="">Deep Learning, NLP, and Representations</a></h2>
+            <p>Introduction
+
+In the last few years, deep neural networks have dominated pattern recognition. They blew the previous state of the art out of the water for many computer vision tasks. Voice recognition is also moving that way.
+
+But despite the results, we have to wonder… why do they work so well?
+
+This post reviews some extremely remarkable results in applying deep neural networks to natural language processing (NLP). In doing so, I hope to make accessible one promising answer as to why deep neural networks work. I think it’s a very elegant perspective.
+
+One Hidden Layer Neural Networks
+
+A neural network with a hidden layer has universality: given enough hidden units, it can approximate any function. This is a frequently quoted – and even more frequently, misunderstood and applied – theorem.
+
+It’s true, essentially, because the hidden layer can be used as a lookup table.
+
+For simplicity, let’s consider a perceptron network. A perceptron is a very simple neuron that fires if it exceeds a certain threshold and doesn’t fire if it doesn’t reach that threshold. A perceptron network gets binary (0 and 1) inputs and gives binary outputs.
+
+Note that there are only a finite number of possible inputs. For each possible input, we can construct a neuron in the hidden layer that fires for that input,1 and only on that specific input. Then we can use the connections between that neuron and the output neurons to control the output in that specific case. 2
+
+
+And so, it’s true that one hidden layer neural networks are universal. But there isn’t anything particularly impressive or exciting about that. Saying that your model can do the same thing as a lookup table isn’t a very strong argument for it. It just means it isn’t impossible for your model to do the task.
+
+Universality means that a network can fit to any training data you give it. It doesn’t mean that it will interpolate to new data points in a reasonable way.
+
+No, universality isn’t an explanation for why neural networks work so well. The real reason seems to be something much more subtle… And, to understand it, we’ll first need to understand some concrete results.</p>
+        </div>
+
+        <div>
+            <p>Date:2017-06-12 Time:11:04:19 </p>
+            <h2><a href="">Amazon Rekognition can now recognize celebrities</a></h2>
+            <p>Amazon Rekognition, Amazon’s deep learning-powered image detection and recognition service, is getting a little bit smarter today. The service can now recognize thousands of celebrities across a number of categories that include politics, sports, business, entertainment and media.
+
+I tried it with a couple of random images I found on Google (ranging from Conan O’Brien to Justin Bieber and a few random actors and actresses in-between) and Rekognition got them all right. Like similar services from Google and Microsoft, developers use Rekognition by pinging an API, but if you have an AWS account, you also can try the demo here.
+
+Whenever it’s available, Rekognition will also link to that celebrity’s IMDB page (which makes sense, given that the IMDB is an Amazon subsidiary).
+
+This new feature complements existing Rekognition capabilities like being able to detect people’s emotions and demographics, facial recognition based on your own image sets and object and scene recognition.
+
+It’s worth noting that Google’s Vision API doesn’t currently offer a similar celebrity recognition feature, but Microsoft’s Cognitive Services does. Microsoft says its version of this feature can recognize about 200,000 celebrities. In my tests, Microsoft’s service performed just as well as Amazon’s, but with the added benefits of being able to identify additional information about other objects in a scene and being able to create a caption based on this (think: “Justin Timberlake wearing a suit and tie smiling at the camera”).</p>
+        </div>
+    </body>
+</html>
