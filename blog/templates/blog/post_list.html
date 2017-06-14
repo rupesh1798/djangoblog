@@ -46,6 +46,16 @@ Whenever it’s available, Rekognition will also link to that celebrity’s IMDB
 This new feature complements existing Rekognition capabilities like being able to detect people’s emotions and demographics, facial recognition based on your own image sets and object and scene recognition.
 
 It’s worth noting that Google’s Vision API doesn’t currently offer a similar celebrity recognition feature, but Microsoft’s Cognitive Services does. Microsoft says its version of this feature can recognize about 200,000 celebrities. In my tests, Microsoft’s service performed just as well as Amazon’s, but with the added benefits of being able to identify additional information about other objects in a scene and being able to create a caption based on this (think: “Justin Timberlake wearing a suit and tie smiling at the camera”).</p>
+
+        </div>
+        <div>
+          {% for post in posts %}
+          <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+          {% endfor %}
         </div>
     </body>
 </html>
